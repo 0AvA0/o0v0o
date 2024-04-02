@@ -1,0 +1,201 @@
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 12px;
+    z-index: 2;
+    height: 76%;
+    width: 16%;
+    transform: translateY(-50%);
+    border-radius: 18px;
+    background-color: rgba(115, 190, 230, 0.749);
+    box-shadow: 2px 2px 10px 4px rgba(6, 122, 185, 0.6);
+    /* 设置阴影 */
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: calc(50% - 20px);
+    left: 0;
+    z-index: 3;
+    width: 6px;
+    height: 40px;
+    border-radius: 24px;
+    background-color: rgba(47, 235, 68, 0.749);
+    box-shadow: 2px 2px 4px 2px rgba(11, 145, 27, 0.6);
+    /* 阴影*/
+    opacity: 0.5;
+    cursor: pointer;
+    /* transition: all 0.4s ease; */
+    /* 添加过渡效果 */
+    transition: width 0.4s ease, background-color 0.6s ease;
+}
+
+.sidebar.hidden {
+    /* transform: translateX(-300px);  平方向上移动元素的位置 */
+    left: -18%;
+}
+
+.toggle-btn.hidden {
+    left: -10px;
+}
+
+.toggle-btn:hover {
+    /* 延伸宽度 */
+
+    width: 14px;
+    /* 收起时的背景色为绿色 */
+    background-color: rgba(211, 242, 12, 0.749);
+    box-shadow: 2px 2px 4px 2px rgba(145, 164, 20, 0.6);
+    
+    /* 透明度 */
+    opacity: 0.5;
+}
+
+.menu li {
+    /* margin-top: 6%;
+    margin-bottom: 6%; */
+    /* 设置元素与其父容器上边框距离 */
+    margin: 6% 12% 6% 12%;
+    /* 设置元素之间的间隔          */
+    padding: 8% 8%;
+    /* 设置元素与其周围元素的距离   */
+    cursor: pointer;
+}
+
+.menu li:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: #eaf3ff;
+    animation: shrink 0.8s ease-in-out forwards;
+    box-shadow: 0 0 10px 8px rgba(221, 236, 245, 0.3);
+}
+
+.menu li.animate {
+    display: flex;
+    width: 64%;
+    /* 设置元素宽度为父元素宽度的80% */
+    /* margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: auto;
+    margin-right: auto; */
+    /* 将元素在父元素中水平居中 */
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: #eb6bcf;
+    animation: slide-in 0.8s ease-in-out forwards;
+    box-shadow: 0 0 4px 2px rgba(160, 24, 151, 0.4);
+}
+
+.menu li.animate-right {
+    display: flex;
+    width: 64%;
+    /* 设置元素宽度为父元素宽度的80% */
+    /* margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: auto;
+    margin-right: auto; */
+    /* 将元素在父元素中水平居中 */
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: #eb6bcf;
+    animation: slide-in-right 0.8s ease-in-out forwards;
+    box-shadow: 0 0 4px 2px rgba(160, 24, 151, 0.4);
+}
+
+.menu li.animate-up {
+    display: flex;
+    width: 64%;
+    /* 设置元素宽度为父元素宽度的80% */
+    /* margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: auto;
+    margin-right: auto; */
+    /* 将元素在父元素中水平居中 */
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: #eb6bcf;
+    animation: slide-in-up 0.8s ease-in-out forwards;
+    box-shadow: 0 0 4px 2px rgba(160, 24, 151, 0.4);
+}
+
+.menu li.animate-down {
+    display: flex;
+    width: 64%;
+    /* 设置元素宽度为父元素宽度的80% */
+    /* margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: auto;
+    margin-right: auto; */
+    /* 将元素在父元素中水平居中 */
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background-color: #eb6bcf;
+    animation: slide-in-down 0.8s ease-in-out forwards;
+    box-shadow: 0 0 4px 2px rgba(160, 24, 151, 0.4);
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-up {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-down {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

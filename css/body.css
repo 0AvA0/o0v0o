@@ -1,0 +1,602 @@
+.body {
+    position: fixed;
+    top: 12%;
+    right: 12px;
+    height: 76%;
+    width: 81%;
+    border-radius: 18px;
+    /* overflow: auto; */
+    background-color: rgba(115, 190, 230, 0.4);
+    box-shadow: 2px 2px 10px 4px rgba(6, 122, 185, 0.6);
+    /* opacity: 0.5; */
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* 
+.content {
+      height: 100%; 使 .content 元素的高度等于父容器的高度
+      padding: 20px;
+      overflow-y: scroll;
+}  */
+
+.content {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    overflow: auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+/* .content>* {
+    margin: 0;
+    padding: 12px 12px;
+    box-sizing: border-box;
+} */
+
+.body.hidden {
+    /* 延伸宽度 */
+    bottom: 12px;
+    width: calc(100% - 24px);
+    height: calc(89.5% - 24px);
+}
+
+.body.top-hidden {
+    /* 向上延伸并设置上下边距 */
+    top: 12px;
+    bottom: 12px;
+    height: calc(100% - 24px);
+}
+
+.minecraft {
+    height: 200%;
+    width: 100%;
+    /* margin: 6% 12% 6% 12%; */
+    /* 设置元素之间的间隔          */
+    /* padding: 8% 8%; */
+    /* 设置元素与其周围元素的距离   */
+    /* cursor: pointer; */
+    border-radius: 18px;
+    background-color: rgba(11, 50, 70, 0.0);
+}
+
+.image {
+    width: 96%;
+    height: 40%;
+    border-radius: 18px;
+    /*background-image: url('../images/sunrise.png');*/
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 4px 2px rgba(145, 164, 20, 0.6);
+    transform: translate(2.2%, 4.4%);
+    opacity: 0.8;
+}
+
+.servers {
+    width: 22%;
+    /*横向排列更改宽度*/
+    height: 15%;
+    background-color: #ccc;
+    margin: 2% 2% 0% 0%;
+    border-radius: 18px;
+    cursor: pointer;
+    display: inline-block;
+    /*横向排列需要注释*/
+    transform: translate(4%, 300%);
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 5%;
+    top: 10%;
+
+}
+
+.name {
+    position: absolute;
+    top: 10%;
+    left: 46%;
+}
+
+.gamer {
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    height: 10%;
+    width: 90%;
+    border-radius: 18px;
+    background-color: rgba(175, 181, 184, 0.749);
+}
+
+.gamer Percentage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 10%;
+    border-radius: 18px;
+    background-color: rgba(228, 80, 47, 0.704);
+}
+
+.motd {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+}
+
+.online {
+    position: absolute;
+    top: 25%;
+    left: 58%;
+}
+
+.host {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+.home {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(1, 245, 32, 0.1); */
+}
+
+.home .main {
+    position: absolute;
+    height: 64%;
+    width: 64%;
+    border-radius: 18px;
+    background-color: rgba(245, 107, 1, 0.8);
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    top: 15%;
+    left: 7%;
+    height: 50%;
+    width: 17%;
+    /* aspect-ratio: 1/1; 维持元素的宽高比为1:1  */
+    /* background-color: azure; */
+    position: absolute;
+
+}
+
+.avatar icon {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    background-image: url('../images/home/IMG_20211220_132224.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px 2px rgba(65, 80, 87, 0.6);
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotateZ(360deg);
+    }
+}
+
+.avatar name {
+    position: absolute;
+    top: 80%;
+}
+
+.home_text {
+    position: absolute;
+    left: 30%;
+    width: 60%;
+    height: 80%;
+    animation: flip 8s ease-in-out forwards;
+    transform-style: preserve-3d;
+    background-color: rgba(248, 173, 139, 0.8);
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    /* 提前声明 transform */
+    will-change: transform;
+    /* 超出隐藏 */
+    /* overflow: hidden; */
+}
+
+.flip-animation {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(241, 53, 11, 0.8);
+    animation: flip 8s ease-in-out forwards;
+    transform-style: preserve-3d;
+    border-top-right-radius: 48%;
+    border-bottom-left-radius: 48%;
+    border-bottom-right-radius: 24%;
+}
+
+.home_text .maple {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 12%;
+    height: 12%;
+    will-change: transform;
+    transform: translateZ(0);
+    transform-origin: center center;
+    animation: maple-fall 8s linear infinite;
+    -webkit-animation: maple-fall 8s linear infinite;
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(238, 36, 5, 0.6);
+        display: block;
+        clip-path: polygon(47% 100%, 48% 70%, 25% 73%, 28% 65%, 7% 47%, 11% 44%, 8% 30%, 20% 32%, 23% 27%, 35% 40%, 32% 13%, 39% 16%, 50% 0, 61% 16%, 68% 13%, 65% 40%, 77% 27%, 80% 32%, 92% 30%, 89% 44%, 93% 47%, 72% 65%, 75% 73%, 52% 70%, 53% 100%);
+        animation: fall 8s infinite ease-in-out;
+    }
+}
+
+.home_text .maple:nth-child(2) {
+    animation-delay: 8.2s;
+}
+
+.home_text .maple:nth-child(3) {
+    animation-delay: 9.2s;
+}
+
+.home_text .maple:nth-child(4) {
+    animation-delay: 11.1s;
+}
+
+.home_text .maple:nth-child(5) {
+    animation-delay: 12.4s;
+}
+
+.home_text .maple:nth-child(6) {
+    animation-delay: 9.9s;
+}
+
+.home_text .maple:nth-child(7) {
+    animation-delay: 10.3s;
+}
+
+.home_text .maple:nth-child(8) {
+    animation-delay: 9.2s;
+}
+
+.home_text .maple:nth-child(9) {
+    animation-delay: 11.8s;
+}
+
+.home_text .maple:nth-child(10) {
+    animation-delay: 8.6s;
+}
+
+.home_text .maple:nth-child(11) {
+    animation-delay: 10.7s;
+}
+
+.home_text g {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.home_text g::after {
+    content: '|';
+    position: absolute;
+    right: -6px;
+    animation: blink 1s infinite;
+}
+
+.home_text c {
+    position: absolute;
+    top: 60%;
+    left: 2%;
+}
+
+.home_text e {
+    position: absolute;
+    top: 80%;
+    left: 2%;
+}
+
+.sql {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sql .main {
+    height: 100%;
+    width: 100%;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.main .square {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border-top-right-radius: 8px;
+    background-color: #c30808;
+    clip-path: polygon(0% 30%, 70% 30%, 70% 100%, 100% 100%, 100% 0%, 0% 0%);
+    /* clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 30%, 30% 30%, 30% 100%); */
+}
+
+/* .image {
+    width: 96%;
+    height: 40%;
+    border-radius: 18px; */
+    /*background-image: url('../images/sunrise.png');*/
+    /* background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 4px 2px rgba(145, 164, 20, 0.6);
+    transform: translate(2.2%, 4.4%);
+    opacity: 0.8;
+} */
+
+/* 轮播图容器 */
+#carousel {
+    width: 95%;
+    height: 80%;
+    border: 2px solid rgba(172, 56, 30, 0.704);
+    position: absolute;
+    border-radius: 18px;
+    left: 50%;
+    top: 45%;
+    box-shadow: 2px 2px 4px 2px rgba(145, 164, 20, 0.6);
+    transform: translateX(-50%) translateY(-50%);
+    overflow: hidden;
+}
+
+/* 轮播图图片内容 */
+#list {
+    background-size: cover;
+    height: 100%;
+    width: 1100%;
+    position: relative;
+}
+
+#list>img {
+    width: 9.091008%;
+    height: 100%;
+    display: block;
+    float: left;
+}
+
+/* 轮播图导航按钮 */
+#slider_nav {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#slider_nav>span {
+    width: 40px;
+    height: 4px;
+    display: block;
+    margin: 0 4px 0 4px;
+    float: left;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* 导航按钮活动样式*/
+#slider_nav .active {
+    background-color: orangered;
+}
+
+/* 下一张、上一张按钮 */
+#prev,
+#next {
+    width: 4%;
+    height: 12%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#prev {
+    left: 1%;
+    /* background-image: url(./iconImg/next.png);
+    background-size: 40px */
+    border-radius: 6px;
+    background-color: rgba(245, 107, 1, 0.4);
+    display: none;
+    pointer-events: none;
+
+    &:hover::after {
+        background-color: aqua;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 60%;
+        height: 52%;
+        border-radius: 6px;
+        pointer-events: auto;
+        background-color: rgba(221, 235, 16, 0.4);
+        clip-path: polygon(0% 25%, 75% 25%, 75% 100%, 100% 100%, 100% 0%, 0% 0%);
+        transform: translate(50%, 48%) rotate(-135deg);
+
+
+    }
+
+}
+
+#next {
+    right: 1%;
+    /* background-image: url(./iconImg/prev.png);
+    background-size: 40px; */
+    border-radius: 6px;
+    background-color: rgba(245, 107, 1, 0.4);
+    display: none;
+    pointer-events: none;
+
+    &:hover::after {
+        background-color: aqua;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 60%;
+        height: 52%;
+        border-radius: 6px;
+        pointer-events: auto;
+        background-color: rgba(221, 235, 16, 0.4);
+        clip-path: polygon(0% 25%, 75% 25%, 75% 100%, 100% 100%, 100% 0%, 0% 0%);
+        transform: translate(14%, 48%) rotate(45deg);
+    }
+}
+
+.sql iframe {
+    height: 97%;
+    width: 100%;
+    border-radius: 18px;
+}
+
+.home.hidden {
+    display: none;
+}
+
+.minecraft.hidden {
+    display: none;
+}
+
+.sql.hidden {
+    display: none;
+}
+
+/* .image:hover {} */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: scaleX(1) translateZ(0);
+    }
+
+    25% {
+        transform: scaleY(-1) rotateY(90deg) translateZ(0);
+    }
+
+    45% {
+        transform: scaleY(1) translateZ(0);
+    }
+
+    50% {
+        transform: scaleX(-1) translateZ(0);
+    }
+
+    65% {
+        transform: scaleY(1) translateZ(0);
+    }
+
+    85% {
+        transform: scaleY(-1) rotateY(-90deg) translateZ(0);
+    }
+
+    100% {
+        transform: scaleX(1) translateZ(0);
+    }
+}
+
+@keyframes maple-fall {
+    0% {
+        transform: translate(0, -25px) rotate(0deg) scale(0.5) translateZ(0);
+        opacity: 0;
+    }
+
+    15% {
+        transform: translate(10px, 0) rotate(30deg) scale(0.7) translateZ(0);
+    }
+
+    30% {
+        transform: translate(25px, 75px) rotate(90deg) scale(1) translateZ(0);
+        opacity: 1;
+    }
+
+    45% {
+        transform: translate(-10px, 130px) rotate(130deg) scale(1.3) translateZ(0);
+    }
+
+    60% {
+        transform: translate(-50px, 150px) rotate(-180deg) scale(1.5) translateZ(0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translate(-35px, 190px) rotate(-220deg) scale(1.7) translateZ(0);
+    }
+
+    90% {
+        transform: translate(10px, 220px) rotate(-250deg) scale(1.8) translateZ(0);
+    }
+
+    100% {
+        transform: translate(0, 254px) rotate(-280deg) scale(2) translateZ(0);
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform-origin: center top;
+        transform: perspective(600px) rotateX(90deg) translateZ(0);
+    }
+
+    100% {
+        transform-origin: center top;
+        transform: perspective(600px) rotateX(0deg) translateZ(0);
+    }
+}
+
+/* @keyframes flip {
+    0% {
+      transform-origin: center top;
+      transform: rotateX(90deg) translateZ(0);
+    }
+    100% {
+      transform-origin: center top;
+      transform: rotateX(0deg) translateZ(0);
+    }*/

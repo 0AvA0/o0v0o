@@ -1,0 +1,15 @@
+{
+    "title": "新标题",
+    "header": {
+        "logoUrl": "https://0ava0.github.io/image/IMG_20211220_132224.jpg",
+        "navItems": [
+            {"name": "首页", "url": "https://example.com/"}, 
+            {"name": "产品", "url": "https://example.com/products/"}
+        ],
+        "icon": "https://0ava0.github.io/image/IMG_20211220_132224.jpg"
+    },
+    "mainContent": "<h1>Hello, World!</h1><p>这是一段新内容。</p>",
+    "footer": {
+        "copyright": "Copyright © 2023fbsahdbfhsabfhsa"
+    }
+}

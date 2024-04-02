@@ -1,0 +1,44 @@
+html,
+body {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* 与sidebar.css冲突出现奇怪的画面 */
+    /* backdrop-filter: blur(8px); */
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    /* 半透明白色背景 */
+}
+
+.container {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/minecraft/rain.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+  }
+  .test {
+    color: #000;
+    font-size: 16px;
+  }
+  
+ /* #footer 选择区域 */ a[href^="http"]  /* :not([href*="//example.com"]) 排除域名*/{
+    text-decoration: none;
+  }
+  
+  a[href^="mailto"] {
+    text-decoration: none;
+  }
+ 

@@ -1,0 +1,182 @@
+{
+    "display": {
+        "title": "欢迎",
+        "icon": "https://0ava0.github.io/image/IMG_20211220_132224.jpg",
+        "header": {
+            "logoUrl": "https://0ava0.github.io/image/IMG_20211220_132224.jpg",
+            "navItems": [
+                {
+                    "name": "首页",
+                    "url": "https://example.com/"
+                },
+                {
+                    "name": "产品",
+                    "url": "https://example.com/products/"
+                }
+            ],
+            "time": [
+                {
+                    "time": 22,
+                    "text": "&nbsp夜深了,早些歇息吧😪"
+                },
+                {
+                    "time": 18,
+                    "text": "&nbsp忙碌一天放松一下吧(～￣▽￣)～"
+                },
+                {
+                    "time": 13,
+                    "text": "&nbsp打起精神,还有半天就下班了ಥ_ಥ"
+                },
+                {
+                    "time": 11,
+                    "text": "&nbsp饭点了,记得好好吃饭😋"
+                },
+                {
+                    "time": 6,
+                    "text": "&nbsp早上好,每天都是好心情（*＾-＾*）"
+                }
+            ]
+        },
+        "body":{
+            "concerning": {
+                "name": "蓝莓",
+                "introduce": {
+                    "greet": [
+                        "I'm from Chongqing, China.😃",
+                        "I'm a Cancer from '00.😊",
+                        "I'm blueberry o0v0o.😉",
+                        "I'm love e-waste.😁",
+                        "I'm an IT enthusiast.🤓",
+                        "I'm like dog.💩",
+                        "I'm love to eat fish.😋",
+                        "I'm ......?🤔"
+                    ],
+                    "contact": {
+                        "qq": "3083682171",
+                        "github": "https://github.com/0AvA0"
+                    }
+                },
+                "e_mail": "zhongjiajianQQ@outlook.com"
+            },
+            "minecraft": {
+                "images": [
+                    "rain.png",
+                    "sunrise.png",
+                    "twilight.png",
+                    "2022-12-02_20.47.14.png",
+                    "2020-10-23_16.45.24.png",
+                    "2020-10-24_18.22.43.png",
+                    "2020-10-24_23.29.42.png",
+                    "2020-12-02_21.45.17.png",
+                    "2023-09-06_22.31.23.png",
+                    "2022-12-13_16.05.47.png",
+                    "2022-12-13_15.43.50.png"
+
+                ],
+                "menu": [
+                    {
+                        "name": "o0v0o.cc",
+                        "url": "o0v0o.cc",
+                        "port": "25565"
+                    },
+                    {
+                        "name": "桃花源",
+                        "url": "ranmc.cc",
+                        "port": "25565"
+                    }
+                ]
+            },
+            "sql_mather":{
+                "url": "https://o0v0o.cc:18/"
+            },
+            "friendly_chain": [
+                {
+                    "name": "Code-Server",
+                    "url": "???",
+                    "description": "???"
+                },
+                {
+                    "name": "???",
+                    "url": "???",
+                    "description": "???"
+                },
+                {
+                    "name": "???",
+                    "url": "???",
+                    "description": "???"
+                }
+            ]
+        },
+        "sidebar": [
+            "Concerning",
+            "Minecraft",
+            "SQL-mather",
+            "Friendly-chain"
+        ],
+        "footer": {
+            "copyright": [
+                {
+                    "content": "CopyRight &copy; By",
+                    "id": "",
+                    "color": "blue",
+                    "font_family": "Arial, sans-serif",
+                    "font_size": "12px",
+                    "font_weight": "normal",
+                    "font_style": "italic",
+                    "text_decoration": "none",
+                    "backlinks": "!"
+                },
+                {
+                    "content": "&nbsp蓝莓",
+                    "id": "",
+                    "color": "rgba(6, 122, 185, 0.6)",
+                    "font_family": "Arial, sans-serif",
+                    "font_size": "12px",
+                    "font_weight": "normal",
+                    "font_style": "italic",
+                    "text_decoration": "underline",
+                    "backlinks": "https://o0v0o.cc"
+                }
+            ],
+            "record": [
+                {
+                    "content": "&nbsp渝ICP备2022013211号",
+                    "id": "",
+                    "color": "rgba(255, 255, 255, 0.5)",
+                    "font_family": "Arial, sans-serif",
+                    "font_size": "100%",
+                    "font_weight": "bold",
+                    "font_style": "normal",
+                    "text_decoration": "overline",
+                    "backlinks": "https://beian.miit.gov.cn/"
+                }
+            ],
+            "other": [
+                {
+                    "content": "&nbsp蓝莓",
+                    "id": "",
+                    "color": "rgba(255, 255, 255, 0.5)",
+                    "font_family": "Arial, sans-serif",
+                    "font_size": "12px",
+                    "font_weight": "normal",
+                    "font_style": "oblique",
+                    "text_decoration": "line-through",
+                    "backlinks": "!"
+                },
+                {
+                    "content": "&nbspTest",
+                    "id": "test",
+                    "color": "rgba(255, 255, 255, 0.5)",
+                    "font_family": "Arial, sans-serif",
+                    "font_size": "48px",
+                    "font_weight": "normal",
+                    "font_style": "oblique",
+                    "text_decoration": "underline overline line-through",
+                    "backlinks": "!"
+                }
+            ]
+        }
+    },
+    "Layout": {},
+    "Color": {}
+}

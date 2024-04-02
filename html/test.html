@@ -1,0 +1,30 @@
+<html>
+<head></head>
+<body>
+  <p>您的 IP 地址为：<span id="ipAddress"></span></p>
+  <p>IP 归属地：<span id="ipLocation"></span></p>
+
+  <script>
+    const ipAddressElement = document.getElementById('ipAddress');
+    const ipLocationElement = document.getElementById('ipLocation');
+
+    // 获取用户的 IP 地址
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+        const ipAddress = data.ip;
+        ipAddressElement.textContent = ipAddress;
+
+        // 根据 IP 地址查询归属地
+        fetch(`https://ipapi.co/${ipAddress}/json/`)
+          .then(response => response.json())
+          .then(data => {
+            const ipLocation = `${data.city}, ${data.region}, ${data.country_name}`;
+            ipLocationElement.textContent = ipLocation;
+          })
+          .catch(error => console.log(error));
+      })
+      .catch(error => console.log(error));
+  </script>
+</body>
+</html>

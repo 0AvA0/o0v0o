@@ -1,0 +1,100 @@
+<html>
+<head>
+  <style>
+    .home_text {
+      position: relative;
+      height: 100vh;
+    }
+
+    /* 枫叶元素 */
+    .home_text .maple {
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      width: 10%;
+      height: 10%;
+      border-radius: 50%;
+      opacity: 0;
+      &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(237, 46, 3, 0.6);
+        display: block;
+        clip-path: polygon(47% 100%, 48% 70%, 25% 73%, 28% 65%, 7% 47%, 11% 44%, 8% 30%, 20% 32%, 23% 27%, 35% 40%, 32% 13%, 39% 16%, 50% 0, 61% 16%, 68% 13%, 65% 40%, 77% 27%, 80% 32%, 92% 30%, 89% 44%, 93% 47%, 72% 65%, 75% 73%, 52% 70%, 53% 100%);
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="home_text">
+    <div class="maple"></div>
+  </div>
+
+  <script>
+    // 创建一个叶子
+    function createLeaf() {
+      const leaf = document.createElement('div');
+      leaf.classList.add('maple');
+      leaf.style.left = `${Math.random() * 100}vw`; // 随机设置叶子的水平位置
+      return leaf;
+    }
+
+    // 添加叶子到容器中
+    function addLeaf() {
+      const homeText = document.querySelector('.home_text');
+      homeText.appendChild(createLeaf());
+    }
+
+    // 移除叶子
+    function removeLeaf(leaf) {
+      const homeText = document.querySelector('.home_text');
+      homeText.removeChild(leaf);
+    }
+
+    // 飘落动画
+    function animateLeaf(leaf) {
+      const duration = Math.random() * 3 + 2; // 随机设置持续时间
+      const delay = Math.random() * 2; // 随机设置延迟时间
+
+      leaf.style.transition = `top ${duration}s ease-in-out, opacity ${duration}s ease-in-out`; // 设置过渡效果
+
+      leaf.style.top = `${window.innerHeight}px`; // 设置叶子的垂直位置
+      leaf.style.opacity = '1';
+
+      setTimeout(() => {
+        leaf.style.top = '-20px'; // 叶子飘落至屏幕底部外，准备移除
+        leaf.style.opacity = '0';
+      }, delay * 1000 + duration * 1000);
+
+      setTimeout(() => {
+        removeLeaf(leaf); // 移除叶子
+      }, delay * 1000 + duration * 1000 + duration * 1000);
+    }
+
+    // 随机飘落叶子
+    function randomLeaves() {
+      const numLeaves = Math.floor(Math.random() * 5) + 3; // 随机设置叶子数量
+
+      for (let i = 0; i < numLeaves; i++) {
+        setTimeout(() => {
+          addLeaf();
+        }, Math.random() * 2000); // 随机设置叶子出现的延迟时间
+      }
+
+      const leaves = document.querySelectorAll('.maple');
+      leaves.forEach((leaf) => {
+        animateLeaf(leaf);
+      });
+    }
+
+    // 每隔一段时间执行一次随机飘落叶子
+    setInterval(() => {
+      randomLeaves();
+    }, 5000);
+
+    randomLeaves(); // 页面加载时执行一次随机飘落叶子
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@import url("../css/content.css");
+@import url("../css/sidebar.css");
+@import url("../css/header.css");
+@import url("../css/body.css");
+@import url("../css/footer.css");
+
+
+
+
+:root {
+    --border-radius: 30px;
+}
+
+.rounded {
+    position: relative;
+}
+
+.rounded::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    background-color: #12ea5a;
+    /* 此处为背景颜色，你可以根据需要自行修改 */
+    opacity: 0.5;
+    /* 此处为透明度，你可以根据需要自行修改 */
+}
